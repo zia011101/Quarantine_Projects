@@ -1,0 +1,65 @@
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+
+</head>
+<body>
+<h1 align="Center" id="s">Digit Place</h1>
+<p id="b" align="center"></p>
+<p id="y" align="center"></p>
+<p id="op" align="center"></p>
+<input type="text" id='ans'>
+<script>
+function getRandomInt(min,max)
+{
+  return Math.floor(Math.random()*(max-min+1))+min;
+}
+	var a = getRandomInt(100,9999),atemp=a; 
+	var t=atemp.toString().length;
+	var arr=[];
+	var temp,tmp,dig_place,res;
+	if  (t==3){
+	  		arr[0]="#";
+
+		for (var i =t;i>0;i--){
+		  	console.log(arr);
+		 	arr[i]=atemp%10;
+		 	atemp=Math.trunc(atemp/10);
+		}
+	}else{
+		for (var i =t;i>0;i--){
+		  	console.log(arr);
+		 	arr[i-1]=atemp%10;
+		 	atemp=Math.trunc(atemp/10);
+		}
+	}
+	if (t==4){
+		tmp=getRandomInt(0,t-1);
+	}else{
+		tmp=getRandomInt(1,t-1);
+	}
+
+	var Q=arr[tmp];
+	dig_place=["thousand","hundred","ten","unit"];
+document.getElementById("b").innerHTML="What is the digit place of "+Q+" in "+a+" ?";
+document.getElementById("y").innerHTML="(Give answer in such way : thousand,hundred,ten,unit)";
+res=dig_place[tmp];
+console.log("Res =>"+res)
+
+
+function myfun(){
+	var x =document.getElementById('ans').value;
+	if (res==x){
+		document.getElementById("op").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op").innerHTML="Sorry, Wrong Answer";
+	}
+}
+</script>
+<button type="button" onclick="myfun()" align="center">Hit me to check!</button>
+</body>
+</html>
