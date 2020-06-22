@@ -45,7 +45,34 @@ function getRandomInt(min,max)
 
 	var Q=arr[tmp];
 	dig_place=["thousand","hundred","ten","unit"];
-document.getElementById("b").innerHTML="What is the digit place of "+Q+" in "+a+" ?";
+
+//changes start
+
+document.getElementById("b").innerHTML="What is the digit place of "+"<span style=\"color:blue\">"+Q+"</span>"+" in ";                     
+var n;                                                                                                                                                                                                                              
+if(t==3)
+{
+n=1;
+}
+else
+{
+n=0;
+}
+for(var j=n;j<=3;j++)
+{
+if(j==tmp)
+{
+document.getElementById("b").innerHTML+="<span style=\"color:blue\">"+arr[j]+"</span>";
+}
+else
+{
+document.getElementById("b").innerHTML+=arr[j];
+}
+}
+document.getElementById("b").innerHTML+=" ?";
+
+//changes end	
+	
 document.getElementById("y").innerHTML="(Give answer in such way : thousand,hundred,ten,unit)";
 res=dig_place[tmp];
 console.log("Res =>"+res)
