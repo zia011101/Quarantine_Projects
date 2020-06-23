@@ -1,0 +1,163 @@
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+</head>
+
+<body>
+<h1 align="Center" id="s">Geometrical Shapes</h1>
+<p align="Center" id="c">Cone</p>
+<img src="https://www.nicepng.com/png/detail/940-9404534_cone-3-d-shape-3d-shapes-of-cone.png" alt="Cone" style="width:100px;height:100px;"><br>
+
+<p>A cone have how many faces?</p>
+<input type="text" id='ans1'>
+<button type="button" onclick="myCone1()">Hit me to check!</button><br>
+<p id="op1"></p>
+
+<p>A cone have how many vertices?</p>
+<input type="text" id='ans2'>
+<button type="button" onclick="myCone2()">Hit me to check!</button><br>
+<p id="op2"></p>
+
+<p>A cone have how many edges?</p>
+<input type="text" id='ans3'>
+<button type="button" onclick="myCone3()">Hit me to check!</button><br>
+<p id="op3"></p>
+
+<p>A cone have how many peaks?</p>
+<input type="text" id='ans4'>
+<button type="button" onclick="myCone4()">Hit me to check!</button><br>
+<p id="op4"></p>
+
+<form>
+  <p>The cone have two flat surface?</p><br>
+  <input type="radio" onclick="myCone51()" name="option" value="Sorry, Wrong Answer" id="true5">True<br>
+  <input type="radio" onclick="myCone52()" name="option" value="Right Answer!!" id="false5">False<br>
+</form>
+<p id="op5"></p>
+
+<form>
+  <p>Which one of these objects are in cone shape?</p><br>
+  <input type="radio" onclick="myCone61()" name="option" value="Sorry, Wrong Answer" id="true6">Potato<br>
+  <input type="radio" onclick="myCone62()" name="option" value="Right Answer!!" id="false6">Birthday party hat<br>
+</form>
+<p id="op6"></p>
+
+<form>
+  <p>A cone in 2 dimension looks similar to?</p><br>
+  <input type="radio" onclick="myCone71()" name="option" value="Right Answer!!" id="true7">Triangle<br>
+  <input type="radio" onclick="myCone72()" name="option" value="Sorry, Wrong Answer" id="false7">Circle<br>
+</form>
+<p id="op7"></p>
+
+<form>
+  <p>The upper part of a cone is "______"?</p><br>
+  <input type="radio" onclick="myCone81()" name="option" value="Right Answer!!" id="true8">Curved<br>
+  <input type="radio" onclick="myCone82()" name="option" value="Sorry, Wrong Answer" id="false8">Crooked<br>
+</form>
+<p id="op8"></p>
+
+<p>Jimmey was eating an ice cream, what is the shape of the ice cream?</p>
+<input type="text" id='ans9'>
+<button type="button" onclick="myCone9()">Hit me to check!</button><br>
+<p id="op9"></p>
+
+<p>The base of a cone is in which shape?</p>
+<input type="text" id='ans10'>
+<button type="button" onclick="myCone10()">Hit me to check!</button><br>
+<p id="op10"></p>
+<script>
+
+function myCone1(){
+	var l =Number(document.getElementById('ans1').value);
+        if (l==1)
+                  {
+		document.getElementById("op1").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op1").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCone2(){
+	var m =Number(document.getElementById('ans2').value);
+        if (m==0)
+                  {
+		document.getElementById("op2").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op2").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCone3(){
+	var n =Number(document.getElementById('ans3').value);
+        if (n==0)
+                  {
+		document.getElementById("op3").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op3").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCone4(){
+	var o =Number(document.getElementById('ans4').value);
+        if (o==1)
+                  {
+		document.getElementById("op4").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op4").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCone51() {
+  var x5 = document.getElementById("true5").value;
+  document.getElementById("op5").innerHTML = x5;
+}
+function myCone52() {
+  var y5 = document.getElementById("false5").value;
+  document.getElementById("op5").innerHTML = y5;
+}
+function myCone61() {
+  var x6 = document.getElementById("true6").value;
+  document.getElementById("op6").innerHTML = x6;
+}
+function myCone62() {
+  var y6 = document.getElementById("false6").value;
+  document.getElementById("op6").innerHTML = y6;
+}
+function myCone71() {
+  var x7 = document.getElementById("true7").value;
+  document.getElementById("op7").innerHTML = x7;
+}
+function myCone72() {
+  var y7 = document.getElementById("false7").value;
+  document.getElementById("op7").innerHTML = y7;
+}
+function myCone81() {
+  var x8 = document.getElementById("true8").value;
+  document.getElementById("op8").innerHTML = x8;
+}
+function myCone82() {
+  var y8 = document.getElementById("false8").value;
+  document.getElementById("op8").innerHTML = y8;
+}
+function myCone9(){
+	var p =document.getElementById('ans9').value;
+        if (p == "Sphere")
+                  {
+		document.getElementById("op9").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op9").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCone10(){
+	var q =document.getElementById('ans10').value;
+        if (q == "Circle")
+                  {
+		document.getElementById("op10").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op10").innerHTML="Sorry, Wrong Answer";
+	}
+}
+
+</script>
+</body>
+</html>
