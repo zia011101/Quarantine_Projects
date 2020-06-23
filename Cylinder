@@ -1,0 +1,172 @@
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+</head>
+
+<body>
+<h1 align="Center" id="s">Geometrical Shapes</h1>
+<p align="Center" id="c">Cylinder</p>
+<img src="https://i.pinimg.com/originals/06/8e/e5/068ee506fe11c524d94c9e83d88ea4c3.png" alt="Cylinder" style="width:100px;height:100px;"><br>
+
+<p>A cylinder have how many faces?</p>
+<input type="text" id='ans1'>
+<button type="button" onclick="myCylinder1()">Hit me to check!</button><br>
+<p id="op1"></p></br>
+
+<p>A cylinder have how many vertices?</p>
+<input type="text" id='ans2'>
+<button type="button" onclick="myCylinder2()">Hit me to check!</button><br>
+<p id="op2"></p></br>
+
+<p>A cylinder have how many edges?</p>
+<input type="text" id='ans3'>
+<button type="button" onclick="myCylinder3()">Hit me to check!</button><br>
+<p id="op3"></p>
+
+<form>
+  <p>The cylinder have two flat surface?</p><br>
+  <input type="radio" onclick="myCylinder41()" name="option" value="Right Answer!!" id="true4">True<br>
+  <input type="radio" onclick="myCylinder42()" name="option" value="Sorry, Wrong Answer" id="false4">False<br>
+</form>
+<p id="op4"></p>
+
+<form>
+  <p>One of the disk in a cylinder is bigger than the other one?</p><br>
+  <input type="radio" onclick="myCylinder51()" name="option" value="Sorry, Wrong Answer" id="true5">True<br>
+  <input type="radio" onclick="myCylinder52()" name="option" value="Right Answer!!" id="false5">False<br>
+</form>
+<p id="op5"></p>
+
+<form>
+  <p>Both the disk's in a cylinder are "________" to each other?</p><br>
+  <input type="radio" onclick="myCylinder61()" name="option" value="Sorry, Wrong Answer" id="true6">Perpendicular<br>
+  <input type="radio" onclick="myCylinder62()" name="option" value="Right Answer!!" id="false6">Parallel<br>
+</form>
+<p id="op6"></p>
+
+<form>
+  <p>Can a cylinder be rolled on the floor?</p><br>
+  <input type="radio" onclick="myCylinder71()" name="option" value="Right Answer!!" id="true7">Yes<br>
+  <input type="radio" onclick="myCylinder72()" name="option" value="Sorry, Wrong Answer" id="false7">No<br>
+</form>
+<p id="op7"></p>
+
+<form>
+  <p>Which of these object's are similer to a cylindrical shape?</p><br>
+  <input type="radio" onclick="myCylinder81()" name="option" value="Right Answer!!" id="true81">Bottol<br>
+  <input type="radio" onclick="myCylinder82()" name="option" value="Sorry, Wrong Answer" id="false81">Building<br>
+  <input type="radio" onclick="myCylinder83()" name="option" value="Right Answer!!" id="true82">Drum<br>
+  <input type="radio" onclick="myCylinder84()" name="option" value="Sorry, Wrong Answer" id="false82">Table<br>
+</form>
+<p id="op8"></p>
+
+<p>The tyre of a truck is shaped as a "_________"?</p>
+<input type="text" id='ans9'>
+<button type="button" onclick="myCylinder9()">Hit me to check!</button><br>
+<p id="op9"></p>
+
+<p>The top of a cylinder is in which shape?</p>
+<input type="text" id='ans10'>
+<button type="button" onclick="myCylinder10()">Hit me to check!</button><br>
+<p id="op10"></p>
+<script>
+
+function myCylinder1(){
+	var l =Number(document.getElementById('ans1').value);
+        if (l==2)
+                  {
+		document.getElementById("op1").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op1").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCylinder2(){
+	var m =Number(document.getElementById('ans2').value);
+        if (m==0)
+                  {
+		document.getElementById("op2").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op2").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCylinder3(){
+	var n =Number(document.getElementById('ans3').value);
+        if (n==2)
+                  {
+		document.getElementById("op3").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op3").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCylinder41() {
+  var x4 = document.getElementById("true4").value;
+  document.getElementById("op4").innerHTML = x4;
+}
+function myCylinder42() {
+  var y4 = document.getElementById("false4").value;
+  document.getElementById("op4").innerHTML = y4;
+}
+function myCylinder51() {
+  var x5 = document.getElementById("true5").value;
+  document.getElementById("op5").innerHTML = x5;
+}
+function myCylinder52() {
+  var y5 = document.getElementById("false5").value;
+  document.getElementById("op5").innerHTML = y5;
+}
+function myCylinder61() {
+  var x6 = document.getElementById("true6").value;
+  document.getElementById("op6").innerHTML = x6;
+}
+function myCylinder62() {
+  var y6 = document.getElementById("false6").value;
+  document.getElementById("op6").innerHTML = y6;
+}
+function myCylinder71() {
+  var x7 = document.getElementById("true7").value;
+  document.getElementById("op7").innerHTML = x7;
+}
+function myCylinder72() {
+  var y7 = document.getElementById("false7").value;
+  document.getElementById("op7").innerHTML = y7;
+}
+function myCylinder81() {
+  var x81 = document.getElementById("true81").value;
+  document.getElementById("op8").innerHTML = x81;
+}
+function myCylinder82() {
+  var y81 = document.getElementById("false81").value;
+  document.getElementById("op8").innerHTML = y81;
+}
+function myCylinder83() {
+  var x82 = document.getElementById("true82").value;
+  document.getElementById("op8").innerHTML = x82;
+}
+function myCylinder84() {
+  var y82 = document.getElementById("false82").value;
+  document.getElementById("op8").innerHTML = y82;
+}
+function myCylinder9(){
+	var o =document.getElementById('ans9').value;
+        if (o == "Cylinder")
+                  {
+		document.getElementById("op9").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op9").innerHTML="Sorry, Wrong Answer";
+	}
+}function myCylinder10(){
+	var p =document.getElementById('ans10').value;
+        if (p== "Circle")
+                  {
+		document.getElementById("op10").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op10").innerHTML="Sorry, Wrong Answer";
+	}
+}
+</script>
+</body>
+</html>
