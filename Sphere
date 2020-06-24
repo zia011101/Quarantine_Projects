@@ -155,7 +155,7 @@ function mySphere84() {
 }
 function mySphere9(){
 	var o =document.getElementById('ans9').value;
-        if (o=="Circle")
+        if (o== "Circle" || "circle" || "CIRCLE")
                   {
 		document.getElementById("op9").innerHTML="Right Answer!!";
 	}else{
@@ -164,7 +164,7 @@ function mySphere9(){
 }
 function mySphere10(){
 	var p =document.getElementById('ans10').value;
-        if (p=="Sphere")
+        if (p== "Sphere" || "sphere" || "SPHERE")
                   {
 		document.getElementById("op10").innerHTML="Right Answer!!";
 	}else{
