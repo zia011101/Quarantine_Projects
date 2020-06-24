@@ -73,7 +73,7 @@ Open it in Google Chrome.
 
 function myCone1(){
 	var l =Number(document.getElementById('ans1').value);
-        if (l==1)
+        if (l==2)
                   {
 		document.getElementById("op1").innerHTML="Right Answer!!";
 	}else{
@@ -82,7 +82,7 @@ function myCone1(){
 }
 function myCone2(){
 	var m =Number(document.getElementById('ans2').value);
-        if (m==0)
+        if (m==1)
                   {
 		document.getElementById("op2").innerHTML="Right Answer!!";
 	}else{
@@ -91,7 +91,7 @@ function myCone2(){
 }
 function myCone3(){
 	var n =Number(document.getElementById('ans3').value);
-        if (n==0)
+        if (n==1)
                   {
 		document.getElementById("op3").innerHTML="Right Answer!!";
 	}else{
@@ -141,7 +141,7 @@ function myCone82() {
 }
 function myCone9(){
 	var p =document.getElementById('ans9').value;
-        if (p == "Sphere")
+        if (p == "Cone" || p == "cone" || p == "CONE")
                   {
 		document.getElementById("op9").innerHTML="Right Answer!!";
 	}else{
@@ -150,7 +150,7 @@ function myCone9(){
 }
 function myCone10(){
 	var q =document.getElementById('ans10').value;
-        if (q == "Circle")
+        if (q == "Circle" || q == "circle" || q == "CIRCLE")
                   {
 		document.getElementById("op10").innerHTML="Right Answer!!";
 	}else{
