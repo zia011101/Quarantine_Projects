@@ -141,7 +141,7 @@ function myCone82() {
 }
 function myCone9(){
 	var p =document.getElementById('ans9').value;
-        if (p == "Sphere")
+        if (p == "Cone")
                   {
 		document.getElementById("op9").innerHTML="Right Answer!!";
 	}else{
