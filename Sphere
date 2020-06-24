@@ -80,7 +80,7 @@ Open it in Google Chrome.
 
 function mySphere1(){
 	var l =Number(document.getElementById('ans1').value);
-        if (l==0)
+        if (l==1)
                   {
 		document.getElementById("op1").innerHTML="Right Answer!!";
 	}else{
@@ -155,7 +155,7 @@ function mySphere84() {
 }
 function mySphere9(){
 	var o =document.getElementById('ans9').value;
-        if (o=="Circle")
+        if (o=="Circle" || 0=="circle" ||o=="CIRCLE")
                   {
 		document.getElementById("op9").innerHTML="Right Answer!!";
 	}else{
@@ -164,7 +164,7 @@ function mySphere9(){
 }
 function mySphere10(){
 	var p =document.getElementById('ans10').value;
-        if (p=="Sphere")
+        if (p=="Sphere" || p=="sphere" || p=="SPHERE")
                   {
 		document.getElementById("op10").innerHTML="Right Answer!!";
 	}else{
