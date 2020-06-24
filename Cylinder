@@ -77,7 +77,7 @@ Open it in Google Chrome.
 
 function myCylinder1(){
 	var l =Number(document.getElementById('ans1').value);
-        if (l==2)
+        if (l==3)
                   {
 		document.getElementById("op1").innerHTML="Right Answer!!";
 	}else{
@@ -152,7 +152,7 @@ function myCylinder84() {
 }
 function myCylinder9(){
 	var o =document.getElementById('ans9').value;
-        if (o == "Cylinder")
+        if (o == "Cylinder" || o == "cylinder" || o == "CYLINDER")
                   {
 		document.getElementById("op9").innerHTML="Right Answer!!";
 	}else{
@@ -160,7 +160,7 @@ function myCylinder9(){
 	}
 }function myCylinder10(){
 	var p =document.getElementById('ans10').value;
-        if (p== "Circle")
+        if (p== "Circle" || p == "circle" || p == "CIRCLE")
                   {
 		document.getElementById("op10").innerHTML="Right Answer!!";
 	}else{
