@@ -143,7 +143,7 @@ function myCuboid82() {
 }
 function myCuboid9(){
 	var o =document.getElementById('ans9').value;
-        if (o == "Rectangle")
+        if (o == "Rectangle" || o == "rectangle" || o == "RECTANGLE")
                   {
 		document.getElementById("op9").innerHTML="Right Answer!!";
 	}else{
@@ -151,7 +151,7 @@ function myCuboid9(){
 	}
 }function myCuboid10(){
 	var p =document.getElementById('ans10').value;
-        if (p== "Cuboid")
+        if (p == "Cuboid" || p == "cuboid" || p == "CUBOID")
                   {
 		document.getElementById("op10").innerHTML="Right Answer!!";
 	}else{
