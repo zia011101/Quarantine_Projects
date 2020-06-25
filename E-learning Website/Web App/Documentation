@@ -1,0 +1,14 @@
+To make our question to compatible to display on this app
+at the end of your javascript file 
+define a javascript object and an array named as "questions" as follows :
+var obj={
+        question: //Your Question,
+        choice1://Choice 1,
+        choice2://Choice 2,
+        choice3://Choice 3,
+        choice4://Choice 4,
+        answer://Answer,
+    };
+    questions.push(obj); //this array is used to store our questions as objects
+    
+Thank You
