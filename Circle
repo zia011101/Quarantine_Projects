@@ -1,0 +1,203 @@
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+</head>
+
+<body>
+<h1 align="Center" id="s">Lines</h1>
+<p align="Center" id="c">Circle</p>
+<img src="https://i.ya-webdesign.com/images/png-circle-4.png" alt="Circle" style="width:120px;height:120px;"><br>
+
+<p>A Circle have how many sides?</p>
+<input type="text" id='ans1'>
+<button type="button" onclick="myCircle1()">Hit me to check!</button><br>
+<p id="op1"></p>
+
+<p>A Circle have how many dimensions?</p>
+<input type="text" id='ans2'>
+<button type="button" onclick="myCircle2()">Hit me to check!</button><br>
+<p id="op2"></p>
+
+<p>What is the total degree of a circle?</p>
+<input type="text" id='ans3'>
+<button type="button" onclick="myCircle3()">Hit me to check!</button><br>
+<p id="op3"></p>
+
+<p>A Circle have how many corners?</p>
+<input type="text" id='ans4'>
+<button type="button" onclick="myCircle4()">Hit me to check!</button><br>
+<p id="op4"></p>
+
+<form>
+  <p>The distance between the centre of a circle and the arc of the circle is same in all direction?</p><br>
+  <input type="radio" onclick="myCircle51()" name="option" value="Right Answer!!" id="true5">True<br>
+  <input type="radio" onclick="myCircle52()" name="option" value="Sorry, Wrong Answer" id="false5">False<br>
+</form>
+<p id="op5"></p>
+
+<form>
+  <p>Which one of these objects are in circuler shape?</p><br>
+  <input type="radio" onclick="myCircle61()" name="option" value="Sorry, Wrong Answer" id="true61">Rod<br>
+  <input type="radio" onclick="myCircle62()" name="option" value="Right Answer!!" id="false61">Bangle<br>
+  <input type="radio" onclick="myCircle63()" name="option" value="Sorry, Wrong Answer" id="true62">Tree<br>
+  <input type="radio" onclick="myCircle64()" name="option" value="Right Answer!!" id="false62">Tyre<br>
+</form>
+<p id="op6"></p>
+
+<form>
+  <p>A circle is a plane figure bounded by which one of these?</p><br>
+  <input type="radio" onclick="myCircle71()" name="option" value="Right Answer!!" id="true7">A curve line<br>
+  <input type="radio" onclick="myCircle72()" name="option" value="Sorry, Wrong Answer" id="false7">A straight line<br>
+</form>
+<p id="op7"></p>
+
+<form>
+  <p>If you look from the top of a circle, it look similer to a straight line?</p><br>
+  <input type="radio" onclick="myCircle81()" name="option" value="Right Answer!!" id="true8">True<br>
+  <input type="radio" onclick="myCircle82()" name="option" value="Sorry, Wrong Answer" id="false8">False<br>
+</form>
+<p id="op8"></p>
+
+<form>
+  <p>A circle can have an infinite numbers of diameters, radius and chords.</p><br>
+  <input type="radio" onclick="myCircle91()" name="option" value="Right Answer!!" id="true9">True<br>
+  <input type="radio" onclick="myCircle92()" name="option" value="Sorry, Wrong Answer" id="false9">False<br>
+</form>
+<p id="op9"></p>
+
+<form>
+  <p>If you cut a circle in half you will get two squares.</p><br>
+  <input type="radio" onclick="myCircle101()" name="option" value="Sorry, Wrong Answer - you will get two semi-circles" id="true10">True<br>
+  <input type="radio" onclick="myCircle102()" name="option" value="Right Answer!! - you will get two semi-circles" id="false10">False<br>
+</form>
+<p id="op10"></p>
+
+<p>What is called as the distance between any point on the circle and its centre?</p>
+<input type="text" id='ans11'>
+<button type="button" onclick="myCircle11()">Hit me to check!</button><br>
+<p id="op11"></p>
+
+<p>A circle in 3 dimension is called as?</p>
+<input type="text" id='ans12'>
+<button type="button" onclick="myCircle12()">Hit me to check!</button><br>
+<p id="op12"></p>
+<script>
+
+function myCircle1(){
+	var l =Number(document.getElementById('ans1').value);
+        if (l==0)
+                  {
+		document.getElementById("op1").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op1").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCircle2(){
+	var m =Number(document.getElementById('ans2').value);
+        if (m==2)
+                  {
+		document.getElementById("op2").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op2").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCircle3(){
+	var n =Number(document.getElementById('ans3').value);
+        if (n==360)
+                  {
+		document.getElementById("op3").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op3").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCircle4(){
+	var o =Number(document.getElementById('ans4').value);
+        if (o==0)
+                  {
+		document.getElementById("op4").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op4").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCircle51() {
+  var x5 = document.getElementById("true5").value;
+  document.getElementById("op5").innerHTML = x5;
+}
+function myCircle52() {
+  var y5 = document.getElementById("false5").value;
+  document.getElementById("op5").innerHTML = y5;
+}
+function myCircle61() {
+  var x61 = document.getElementById("true61").value;
+  document.getElementById("op6").innerHTML = x61;
+}
+function myCircle62() {
+  var y61 = document.getElementById("false61").value;
+  document.getElementById("op6").innerHTML = y61;
+}
+function myCircle63() {
+  var x62 = document.getElementById("true62").value;
+  document.getElementById("op6").innerHTML = x62;
+}
+function myCircle64() {
+  var y62 = document.getElementById("false62").value;
+  document.getElementById("op6").innerHTML = y62;
+}
+function myCircle71() {
+  var x7 = document.getElementById("true7").value;
+  document.getElementById("op7").innerHTML = x7;
+}
+function myCircle72() {
+  var y7 = document.getElementById("false7").value;
+  document.getElementById("op7").innerHTML = y7;
+}
+function myCircle81() {
+  var x8 = document.getElementById("true8").value;
+  document.getElementById("op8").innerHTML = x8;
+}
+function myCircle82() {
+  var y8 = document.getElementById("false8").value;
+  document.getElementById("op8").innerHTML = y8;
+}
+function myCircle91() {
+  var x9 = document.getElementById("true9").value;
+  document.getElementById("op9").innerHTML = x9;
+}
+function myCircle92() {
+  var y9 = document.getElementById("false9").value;
+  document.getElementById("op9").innerHTML = y9;
+}
+function myCircle101() {
+  var x10 = document.getElementById("true10").value;
+  document.getElementById("op10").innerHTML = x10;
+}
+function myCircle102() {
+  var y10 = document.getElementById("false10").value;
+  document.getElementById("op10").innerHTML = y10;
+}
+function myCircle11(){
+	var p =document.getElementById('ans11').value;
+        if (p=="Radius" || p=="radius" || p=="RADIUS")
+                  {
+		document.getElementById("op11").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op11").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myCircle12(){
+	var q =document.getElementById('ans12').value;
+        if (q == "Sphere" || q == "sphere" || q == "SPHERE")
+                  {
+		document.getElementById("op12").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op12").innerHTML="Sorry, Wrong Answer";
+	}
+}
+
+</script>
+</body>
+</html>
