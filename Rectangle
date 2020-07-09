@@ -1,0 +1,178 @@
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+</head>
+
+<body>
+<h1 align="Center" id="s">Lines</h1>
+<p align="Center" id="c">Rectangle</p>
+<img src="https://images.vexels.com/media/users/3/139257/isolated/preview/b8fa8f291632f8fe68842e4fb100d8e0-square-rectangle-shape-by-vexels.png" alt="Rectangle" style="width:100px;height:100px;"><br>
+
+<p>A rectangle have how many sides?</p>
+<input type="text" id='ans1'>
+<button type="button" onclick="myRectangle1()">Hit me to check!</button><br>
+<p id="op1"></p>
+
+<p>How many sides of a rectanles are equal in length?</p>
+<input type="text" id='ans2'>
+<button type="button" onclick="myRectangle2()">Hit me to check!</button><br>
+<p id="op2"></p>
+
+<p>A rectangle have how many corners?</p>
+<input type="text" id='ans3'>
+<button type="button" onclick="myRectangle3()">Hit me to check!</button><br>
+<p id="op3"></p>
+
+<p>A rectangle have how many dimensions?</p>
+<input type="text" id='ans4'>
+<button type="button" onclick="myRectangle4()">Hit me to check!</button><br>
+<p id="op4"></p>
+
+<form>
+  <p>A rectangle have only length and breadth.</p><br>
+  <input type="radio" onclick="myRectangle51()" name="option" value="Right Answer!!" id="true5">True<br>
+  <input type="radio" onclick="myRectangle52()" name="option" value="Sorry, Wrong Answer" id="false5">False<br>
+</form>
+<p id="op5"></p>
+
+<form>
+  <p>A rectangle have 4 angles, each measuring 90 degree.</p><br>
+  <input type="radio" onclick="myRectangle61()" name="option" value="Right Answer!!" id="true6">True<br>
+  <input type="radio" onclick="myRectangle62()" name="option" value="Sorry, Wrong Answer" id="false6">False<br>
+</form>
+<p id="op6"></p>
+
+<form>
+  <p>The sides of a rectangle are not parallel to each other.</p><br>
+  <input type="radio" onclick="myRectangle71()" name="option" value="Sorry, Wrong Answer" id="true7">True<br>
+  <input type="radio" onclick="myRectangle72()" name="option" value="Right Answer!!" id="false7">False<br>
+</form>
+<p id="op7"></p>
+
+<form>
+  <p>Which on of these is not a rectangular shaped object?</p><br>
+  <input type="radio" onclick="myRectangle81()" name="option" value="Sorry, Wrong Answer" id="true81">Book<br>
+  <input type="radio" onclick="myRectangle82()" name="option" value="Sorry, Wrong Answer" id="true82">Door<br>
+  <input type="radio" onclick="myRectangle83()" name="option" value="Right Answer!!"      id="false83">Doughnut<br>
+  <input type="radio" onclick="myRectangle84()" name="option" value="Sorry, Wrong Answer" id="true84">Envelope<br>
+  <input type="radio" onclick="myRectangle85()" name="option" value="Sorry, Wrong Answer" id="true85">Mobile Phone<br>
+</form>
+<p id="op8"></p>
+
+<p>The shape of a blackboard is "_________".</p>
+<input type="text" id='ans9'>
+<button type="button" onclick="myRectangle9()">Hit me to check!</button><br>
+<p id="op9"></p>
+
+<p>"________" sides of a rectangle have same length.</p>
+<input type="text" id='ans10'>
+<button type="button" onclick="myRectangle10()">Hit me to check!</button><br>
+<p id="op10"></p>
+<script>
+
+function myRectangle1(){
+	var l =Number(document.getElementById('ans1').value);
+        if (l==4)
+                  {
+		document.getElementById("op1").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op1").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myRectangle2(){
+	var m =Number(document.getElementById('ans2').value);
+        if (m==2)
+                  {
+		document.getElementById("op2").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op2").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myRectangle3(){
+	var n =Number(document.getElementById('ans3').value);
+        if (n==4)
+                  {
+		document.getElementById("op3").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op3").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myRectangle4(){
+	var o =Number(document.getElementById('ans4').value);
+        if (o==2)
+                  {
+		document.getElementById("op4").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op4").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myRectangle51() {
+  var x5 = document.getElementById("true5").value;
+  document.getElementById("op5").innerHTML = x5;
+}
+function myRectangle52() {
+  var y5 = document.getElementById("false5").value;
+  document.getElementById("op5").innerHTML = y5;
+}
+function myRectangle61() {
+  var x6 = document.getElementById("true6").value;
+  document.getElementById("op6").innerHTML = x6;
+}
+function myRectangle62() {
+  var y6 = document.getElementById("false6").value;
+  document.getElementById("op6").innerHTML = y6;
+}
+function myRectangle71() {
+  var x7 = document.getElementById("true7").value;
+  document.getElementById("op7").innerHTML = x7;
+}
+function myRectangle72() {
+  var y7 = document.getElementById("false7").value;
+  document.getElementById("op7").innerHTML = y7;
+}
+function myRectangle81() {
+  var x81 = document.getElementById("true81").value;
+  document.getElementById("op8").innerHTML = x81;
+}
+function myRectangle82() {
+  var x82 = document.getElementById("true82").value;
+  document.getElementById("op8").innerHTML = x82;
+}
+function myRectangle83() {
+  var x83 = document.getElementById("false83").value;
+  document.getElementById("op8").innerHTML = x83;
+}
+function myRectangle84() {
+  var x84 = document.getElementById("true84").value;
+  document.getElementById("op8").innerHTML = x84;
+}
+function myRectangle85() {
+  var x85 = document.getElementById("true85").value;
+  document.getElementById("op8").innerHTML = x85;
+}
+function myRectangle9(){
+	var p =document.getElementById('ans9').value;
+        if (p =="Rectangle" || p =="rectangle" || p =="RECTANGLE")
+                  {
+		document.getElementById("op9").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op9").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function myRectangle10(){
+	var q =document.getElementById('ans10').value;
+        if (q =="Opposite" || q =="opposite" || q =="OPPOSITE")
+                  {
+		document.getElementById("op10").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op10").innerHTML="Sorry, Wrong Answer";
+	}
+}
+
+</script>
+</body>
+</html>
