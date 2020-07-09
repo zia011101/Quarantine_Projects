@@ -1,0 +1,101 @@
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+</head>
+
+<body>
+<h1 align="Center" id="s">Lines</h1>
+<p align="Center" id="c">Curve Line</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/CVsimp.svg/1200px-CVsimp.svg.png" alt="curve" style="width:300px;height:100px;"><br>
+
+
+<form>
+  <p>A curved line is a line which is bended?</p><br>
+  <input type="radio" onclick="myCurve11()" name="option" value="Right Answer!!" id="true1">True<br>
+  <input type="radio" onclick="myCurve12()" name="option" value="Sorry, Wrong Answer" id="false1">False<br>
+</form>
+<p id="op1"></p>
+
+<form>
+  <p>A rainbow is straight in nature?</p><br>
+  <input type="radio" onclick="myCurve21()" name="option" value="Sorry, Wrong Answer - It is curved" id="true2">True<br>
+  <input type="radio" onclick="myCurve22()" name="option" value="Right Answer!! - It is curved" id="false2">False<br>
+</form>
+<p id="op2"></p>
+
+<form>
+  <p>A curved line have only one dimension, namely length, without any width nor depth.</p><br>
+  <input type="radio" onclick="myCurve31()" name="option" value="Right Answer!!" id="true3">True<br>
+  <input type="radio" onclick="myCurve32()" name="option" value="Sorry, Wrong Answer" id="false3">False<br>
+</form>
+<p id="op3"></p>
+
+<form>
+  <p>The Alphabet "S" is an example of a curved line?</p><br>
+  <input type="radio" onclick="myCurve41()" name="option" value="Right Answer!!" id="true4">Yes<br>
+  <input type="radio" onclick="myCurve42()" name="option" value="Sorry, Wrong Answer" id="false4">No<br>
+</form>
+<p id="op4"></p>
+
+<p>Write which one of these is not an example of a curve line?<br>
+1)River<br>
+2)Pear<br>
+3)Tree branch<br>
+4)Pencil<br>
+5)Outline of a Mountain<br></p>
+<input type="text" id='ans5'>
+<button type="button" onclick="myCurve5()">Hit me to check!</button><br>
+<p id="op5"></p>
+
+<script>
+
+
+function myCurve11() {
+  var x1 = document.getElementById("true1").value;
+  document.getElementById("op1").innerHTML = x1;
+}
+function myCurve12() {
+  var y1 = document.getElementById("false1").value;
+  document.getElementById("op1").innerHTML = y1;
+}
+function myCurve21() {
+  var x2 = document.getElementById("true2").value;
+  document.getElementById("op2").innerHTML = x2;
+}
+function myCurve22() {
+  var y2 = document.getElementById("false2").value;
+  document.getElementById("op2").innerHTML = y2;
+}
+function myCurve31() {
+  var x3 = document.getElementById("true3").value;
+  document.getElementById("op3").innerHTML = x3;
+}
+function myCurve32() {
+  var y3 = document.getElementById("false3").value;
+  document.getElementById("op3").innerHTML = y3;
+}
+function myCurve41() {
+  var x4 = document.getElementById("true4").value;
+  document.getElementById("op4").innerHTML = x4;
+}
+function myCurve42() {
+  var y4 = document.getElementById("false4").value;
+  document.getElementById("op4").innerHTML = y4;
+}
+function myCurve5(){
+	var p =document.getElementById('ans5').value;
+        if (p == "Pencil" || p=="pencil" || p=="PENCIL")
+                  {
+		document.getElementById("op5").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op5").innerHTML="Sorry, Wrong Answer";
+	}
+}
+
+</script>
+</body>
+</html>
