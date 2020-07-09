@@ -1,0 +1,208 @@
+<!-- 
+Open it in Google Chrome.
+ -->
+<html>
+<head>
+<title>Home Page</title>
+<link rel="stylesheet" href="f.css"></link>
+</head>
+
+<body>
+<h1 align="Center" id="s">Lines</h1>
+<p align="Center" id="c">Square</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/1200px-Square_-_black_simple.svg.png" alt="Square" style="width:150px;height:150px;"><br>
+
+<p>A Square have how many sides?</p>
+<input type="text" id='ans1'>
+<button type="button" onclick="mySquare1()">Hit me to check!</button><br>
+<p id="op1"></p>
+
+<p>A Square have how many dimensions?</p>
+<input type="text" id='ans2'>
+<button type="button" onclick="mySquare2()">Hit me to check!</button><br>
+<p id="op2"></p>
+
+<p>What is the degree of one angle of a Square?</p>
+<input type="text" id='ans3'>
+<button type="button" onclick="mySquare3()">Hit me to check!</button><br>
+<p id="op3"></p>
+
+<p>A Square have how many corners?</p>
+<input type="text" id='ans4'>
+<button type="button" onclick="mySquare4()">Hit me to check!</button><br>
+<p id="op4"></p>
+
+<form>
+  <p>The length of all the sides of a square are equal?</p><br>
+  <input type="radio" onclick="mySquare51()" name="option" value="Right Answer!!" id="true5">True<br>
+  <input type="radio" onclick="mySquare52()" name="option" value="Sorry, Wrong Answer" id="false5">False<br>
+</form>
+<p id="op5"></p>
+
+<form>
+  <p>Which one of these objects are not in square shape?</p><br>
+  <input type="radio" onclick="mySquare61()" name="option" value="Sorry, Wrong Answer" id="true61">Rubics cube<br>
+  <input type="radio" onclick="mySquare62()" name="option" value="Sorry, Wrong Answer" id="true62">Dice<br>
+  <input type="radio" onclick="mySquare63()" name="option" value="Right Answer!!" id="false63">Apple<br>
+  <input type="radio" onclick="mySquare64()" name="option" value="Sorry, Wrong Answer" id="true64">Chess board<br>
+  <input type="radio" onclick="mySquare65()" name="option" value="Sorry, Wrong Answer" id="true65">Bread slice<br>
+</form>
+<p id="op6"></p>
+
+<form>
+  <p>The opposite sides of a square is parallel to each other.</p><br>
+  <input type="radio" onclick="mySquare71()" name="option" value="Right Answer!!" id="true7">True<br>
+  <input type="radio" onclick="mySquare72()" name="option" value="Sorry, Wrong Answer" id="false7">False<br>
+</form>
+<p id="op7"></p>
+
+<form>
+  <p>If you look from the top of a Square, it look similer to a straight line?</p><br>
+  <input type="radio" onclick="mySquare81()" name="option" value="Right Answer!!" id="true8">True<br>
+  <input type="radio" onclick="mySquare82()" name="option" value="Sorry, Wrong Answer" id="false8">False<br>
+</form>
+<p id="op8"></p>
+
+<form>
+  <p>The length of diagonals in a Square are greater than the sides.</p><br>
+  <input type="radio" onclick="mySquare91()" name="option" value="Right Answer!!" id="true9">True<br>
+  <input type="radio" onclick="mySquare92()" name="option" value="Sorry, Wrong Answer" id="false9">False<br>
+</form>
+<p id="op9"></p>
+
+<form>
+  <p>If you cut a Square horizontally in half you will get two squares.</p><br>
+  <input type="radio" onclick="mySquare101()" name="option" value="Sorry, Wrong Answer - you will get two rectangles" id="true10">True<br>
+  <input type="radio" onclick="mySquare102()" name="option" value="Right Answer!! - you will get two rectangles" id="false10">False<br>
+</form>
+<p id="op10"></p>
+
+<p>If you cut a Square diagonally in half you will get two "________"</p>
+<input type="text" id='ans11'>
+<button type="button" onclick="mySquare11()">Hit me to check!</button><br>
+<p id="op11"></p>
+
+<p>A Square in 3 dimension is called as?</p>
+<input type="text" id='ans12'>
+<button type="button" onclick="mySquare12()">Hit me to check!</button><br>
+<p id="op12"></p>
+<script>
+
+function mySquare1(){
+	var l =Number(document.getElementById('ans1').value);
+        if (l==4)
+                  {
+		document.getElementById("op1").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op1").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function mySquare2(){
+	var m =Number(document.getElementById('ans2').value);
+        if (m==2)
+                  {
+		document.getElementById("op2").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op2").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function mySquare3(){
+	var n =Number(document.getElementById('ans3').value);
+        if (n==90)
+                  {
+		document.getElementById("op3").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op3").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function mySquare4(){
+	var o =Number(document.getElementById('ans4').value);
+        if (o==4)
+                  {
+		document.getElementById("op4").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op4").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function mySquare51() {
+  var x5 = document.getElementById("true5").value;
+  document.getElementById("op5").innerHTML = x5;
+}
+function mySquare52() {
+  var y5 = document.getElementById("false5").value;
+  document.getElementById("op5").innerHTML = y5;
+}
+function mySquare61() {
+  var x61 = document.getElementById("true61").value;
+  document.getElementById("op6").innerHTML = x61;
+}
+function mySquare62() {
+  var x62 = document.getElementById("true62").value;
+  document.getElementById("op6").innerHTML = x62;
+}
+function mySquare63() {
+  var x63 = document.getElementById("false63").value;
+  document.getElementById("op6").innerHTML = x63;
+}
+function mySquare64() {
+  var x64 = document.getElementById("true64").value;
+  document.getElementById("op6").innerHTML = x64;
+}
+function mySquare65() {
+  var x65 = document.getElementById("true65").value;
+  document.getElementById("op6").innerHTML = x65;
+}
+function mySquare71() {
+  var x7 = document.getElementById("true7").value;
+  document.getElementById("op7").innerHTML = x7;
+}
+function mySquare72() {
+  var y7 = document.getElementById("false7").value;
+  document.getElementById("op7").innerHTML = y7;
+}
+function mySquare81() {
+  var x8 = document.getElementById("true8").value;
+  document.getElementById("op8").innerHTML = x8;
+}
+function mySquare82() {
+  var y8 = document.getElementById("false8").value;
+  document.getElementById("op8").innerHTML = y8;
+}
+function mySquare91() {
+  var x9 = document.getElementById("true9").value;
+  document.getElementById("op9").innerHTML = x9;
+}
+function mySquare92() {
+  var y9 = document.getElementById("false9").value;
+  document.getElementById("op9").innerHTML = y9;
+}
+function mySquare101() {
+  var x10 = document.getElementById("true10").value;
+  document.getElementById("op10").innerHTML = x10;
+}
+function mySquare102() {
+  var y10 = document.getElementById("false10").value;
+  document.getElementById("op10").innerHTML = y10;
+}
+function mySquare11(){
+	var p =document.getElementById('ans11').value;
+        if (p=="Triangle" || p=="triangle" || p=="TRIANGLE")
+                  {
+		document.getElementById("op11").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op11").innerHTML="Sorry, Wrong Answer";
+	}
+}
+function mySquare12(){
+	var q =document.getElementById('ans12').value;
+        if (q == "Cube" || q == "cube" || q == "CUBE")
+                  {
+		document.getElementById("op12").innerHTML="Right Answer!!";
+	}else{
+		document.getElementById("op12").innerHTML="Sorry, Wrong Answer";
+	}
+}
+
+</script>
+</body>
+</html>
