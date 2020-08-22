@@ -1,0 +1,325 @@
+const Question =document.getElementById("queID");
+const choice = Array.from(document.getElementsByClassName("choice-text"));
+const ProgText=document.getElementById("ProgressText");
+const ScoreText=document.getElementById("Score");
+const ProgBar=document.getElementById("progressBarFull");
+
+let currentQue={};
+let acceptAns=true;
+
+let score=0;
+let QueCounter=0;
+let availabelQue=[];
+let questions=[]
+getRandomInt=(min,max)=>
+{
+  return Math.floor(Math.random()*(max-min+1))+min;
+};
+getRandomfromList=(LisT)=>{
+    var temp = getRandomInt(0,(LisT.length-1));
+    return LisT[temp];
+};
+
+getRange=(min,max)=>{
+    var ary =[];
+    for (let i = min; i <= max; i++) {
+        ary.push(i);
+    };
+    return ary;
+};
+zip=(arr,...ars)=>{
+    return arr.map((val,i)=>ars.reduce((a,arr)=>[...a,arr[i]],[val]));
+}
+shuffle=(array)=>{
+    var currNdx=array.length,temp,ranIndx;
+    while(0!==currNdx){
+        ranIndx=Math.floor(Math.random()*currNdx);
+        currNdx--;
+        temp=array[currNdx];
+        array[currNdx]=array[ranIndx];
+        array[ranIndx]=temp;
+    }
+    return array;
+};
+QueGen=(questions)=>{
+    var dig = getRange(00,1000)
+    var x = getRandomInt(100,1000);
+    var y = getRandomInt(10,100);
+    var z = x - y;
+    var choices=[];
+    choices[0]=z;
+   
+    for (let i=1; i<=3; i++){
+         var st=getRandomfromList(dig);
+         while(choices.includes(st)){
+            st=getRandomfromList(dig);
+         }
+         choices.push(st);
+    }
+    shuffle(choices);
+    
+
+    var places1 = ["village", "city", "country", "continent",
+     "town", "a building", " skyscraper", 
+     "tower", " fort", " beach", " world", " planet", " district"];
+    for (let i=0; i<=12; i++){
+        var place1=getRandomfromList(places1);
+    }
+    shuffle(place1);
+
+
+    var fruits = [ "apples", "apricots", "avocados",
+     "bananas", "boysenberries", "blueberries", "bayberry",
+     "cherries", "cantaloupe", "clementine", "cucumbers",
+     "dates", "dewberries", "dragon fruit",
+     "elderberry", "eggfruit", "entawak",
+     "fig", "farkleberry",
+     "grapefruit", "grapes", "gooseberries", "guava",
+     "hackberry", "huckleberry", "jackfruit","kiwi", "lime", "lychee",   
+     "mango", "mulberry", "musk melon", "olive", "oranges",
+     "papaya", "persimmon", "plum", "pear", "peach", 
+     "pomegranate", "pineapple","passion fruit", "raspberries",
+     "star fruit", "strawberries", "tomato", "tangerine", "tamarind", 
+     "tangalo", "watermelon", "wolfberry","zucchini"];
+    for (let i=0; i<=51; i++){
+        var fruit1=getRandomfromList(fruits);
+    }
+    shuffle(fruit1);
+
+   var vegs =["potatoes", "tomatoes", "onions", "carrots",
+    "broccoli", "bell peppers", "lettuce", "cucumbers",
+    "celery", "corn", "garlic", "mushrooms",
+    "cabbage", "spinach", "sweet potatoes", "green beans",
+    "cauliflower", "spring onions", "asparagus", "artichoke", 
+    "chickpeas", "kidney beans", "green beans", "soy beans", "peanuts"];
+   for (let i=0; i<=24; i++){
+   var veg1=getRandomfromList(vegs);
+   }
+   shuffle(veg1);
+
+
+   var genders =["man", "woman"];
+   for (let i=0; i<=1; i++){
+   var gen1=getRandomfromList(genders);
+   }
+   shuffle(gen1);
+   
+
+   var pros =["accountants", "actors", "clerks", "lawyers",
+    "advertisors", "engineers", "farmers", "salesmens",
+    "managers", "supervisors", "inspectors", "teachers",
+    "technicians", "officers", "pilots", "doctors",
+    "jewelers", "athletes", "chefs", "waiters",
+    "paramedics", "dentists", "train conductors",
+    "nurses", "electricians", "businessmans", "students",
+    "surgeons", "secretaries", "soldiers", "repairmans",
+    "scientists", "reporters", "construction workers",
+    "professors", "police officers", "postmans", "photographers",
+    "painters", "mechanics", "magicians", "lifeguards",
+    "clowns", "housekeepers", "gardeners", "footballers",
+    "builders", "firemans", "carpenters", "architects",
+    "boxers", "cameramans", "detectives", "journalists",
+    "divers", "librarians", "singers"];
+    for (let i=0; i<=56; i++){
+        var pro1=getRandomfromList(pros);
+        }
+        shuffle(pro1);
+        
+
+    var subs1 =["maths", "science", "physics", "biology", "chemistry"];
+    for (let i=0; i<=4; i++){
+        var sub1=getRandomfromList(subs1);
+        }
+        shuffle(sub1);
+        
+
+    var subs2 =["history", "geography", "civics", "economics", "english"];
+    for (let i=0; i<=4; i++){
+        var sub2=getRandomfromList(subs2);
+        }
+        shuffle(sub2);
+        
+    
+    var months1 =["january", "february", "march", "april", "may", "june"];
+    for (let i=0; i<=5; i++){
+        var mon1=getRandomfromList(months1);
+        }
+        shuffle(mon1);
+        
+
+    var months2 =["july", "august", "september", "october", "november", "december"];
+    for (let i=0; i<=5; i++){
+        var mon2=getRandomfromList(months2);
+        }
+        shuffle(mon2);    
+        
+
+    var facs = ["textile", "toy", "food", "paper", "leather", "petrol", "car", "plane","train","television","cycle"]
+    for (let i=0; i<=11; i++){
+        var fac1=getRandomfromList(facs);
+        }
+        shuffle(fac1);    
+        
+
+    var stuffs1 = ["rice", "wheat", "salt", "sugar", "tea", "coffee", "pen", "pencil", "wood","toy","marbles", "candies",  "tickets", "stickers", "erasers"]
+    for (let i=0; i<=14; i++){
+        var stf1=getRandomfromList(stuffs1);
+        }
+        shuffle(stf1);    
+        
+
+    var stuffs2 = ["balls", "thread", "book", "bottle", "shirt", "stick", "sand", "rock", "clay","crayon", "oranges", "blocks", "eggs", "caps","bananas"]
+    for (let i=0; i<=14; i++){
+        var stf2=getRandomfromList(stuffs2);
+        }
+        shuffle(stf2); 
+        
+        
+    var stuffs3 = ["balls", "threads", "books", "bottles", 
+    "shirts", "sticks", "rocks", "clays", 
+    "crayons", "pens", "pencils", "marbles", "candies", 
+    "oranges", "blocks", "tickets", "erasers", "eggs", 
+    "caps", "stickers", "bananas"]
+    for (let i=0; i<=20; i++){
+        var stf3=getRandomfromList(stuffs3);
+        }
+        shuffle(stf3); 
+        
+        
+    var jags = ["box", "bag", "container"];
+    for (let i=0; i<=2; i++){
+        var jag=getRandomfromList(jags);
+        }
+        shuffle(jag); 
+    
+
+    var names1 = ["Monica", "Rachel", "Phoebe", "Jennifer", "lisa", "Jill", "Amy", "Christina", 
+    "Judy", "Lauren", "Helena", "Emma", "Olivia", "Isabella", "Harley", "Natasha", "Carol", 
+    "Scarlet", "Mary", "Jane", "Gamora", "Nebula", "Okoye", "Anne", "Ayesha", "Hela", "Pepper", 
+    "Pam", "Kelly", "Erin", "Angela", "Kate", "Phyllis", "Meredith", "Mindy", "Malora", "Jan", 
+    "Nellie", "Karen", "Holly", "Ariana", "Selena", "Adele", "Halsey", "Billie", "lele", "Demi", 
+    "Camila","Taylor", "Zara", "Shakira", "Rita", "Rihanna"];
+    for (let i=0; i<=52; i++){
+        var name1=getRandomfromList(names1);
+        }
+        shuffle(name1); 
+        
+
+    var names2 = ["Chandler", "Ross", "Joey", "Matthew", "Matt", "David", "James", "Gunther", 
+    "Mike", "Paul", "Tom", "Richard", "Giovanni", "Tony", "Robert", "Chris", "Bruce", "Clint",
+    "Justin", "Erik", "Nick", "Steve", "Peter", "Sam", "Bucky", "Scott", "Stephen", "Howard", 
+    "Robin", "Jim", "Dwight", "Oscar", "Michael","Ryan", "Kevin", "John", "Rainn", "Andy", 
+    "Brian", "Stanley", "Creed", "Toby", "Darryl", "Mose", "Gabe", "Roy", "Pete", "Jake",
+    "Bruno","Shawn", "Zayn", "Charlie", "Martin"];
+    for (let i=0; i<=52; i++){
+        var name2=getRandomfromList(names2);
+        }
+        shuffle(name2); 
+
+    var plc = ["store", "godown"];
+    for (let i=0; i<=1; i++){
+        var plc1=getRandomfromList(plc);
+        }
+        shuffle(plc1); 
+        
+
+    var Que=[];
+    Que[0]= "In an examination, "+x+" students appeared and "+y+ " students failed. What is the total number of students who passed in the examination ?";
+    Que[1]= "The total population of a "+place1+" is "+x+". If "+y+" are men, then what is the total number of women in the "+place1+"?";
+    Que[2]= "The total number of "+pro1+" in a "+place1+" is "+x+". If "+y+" are male, then what is the total number of female "+pro1+"?";
+    Que[3]= "The total number of students in a school is "+x+". If "+y+" students are in primary section. What is total number of students in the secondary section?";
+    Que[4]= "The total number of "+fruit1+" plucked from the farms is"+x+".If a "+gen1+" plucked "+y+" "+fruit1+" from one farm, then what is the total number of "+fruit1+" plucked from the second farm?";
+    Que[5]= "The total number of books in a school library is "+x+". If "+y+" books are of "+sub1+" then what is the total number of "+sub2+" books?";
+    Que[6]= "The total number of "+jag+"'s in the "+plc1+" is "+x+". If "+jag+"'s of "+stf1+" is "+y+", then the "+jag+"'s of "+stf2+" in total wil be?";
+    Que[7]= "The total amount spent on different items by the school management is "+x+". If school management spent Rs."+y+" on "+pro1+" pay, then what is total amount spent on the remaining work?";
+    Que[8]= "The total number of "+veg1+" plucked from the farms is "+x+". If a "+gen1+" plucked "+y+" "+veg1+" from one farm, then what is the total number of "+veg1+" plucked from the second farm?";
+    Que[9]= "The total number of "+fac1+"s manufactured in a year is "+x+". If till "+mon1+" "+y+" "+fac1+"s are manufactured, then what is the total number of "+fac1+"s are manufactured within rest of the year?";
+    Que[10]= name1+" has "+x+" "+stf3+". "+name2+" takes "+name1+"'s "+y+" "+stf3+". How much "+stf3+" does "+name1+" have in all now?";
+    Que[11]= "If there are "+x+" "+stf3+" in a "+jag+" and "+name1+" takes "+y+" "+stf3+" from it, how much "+stf3+" are in the "+jag+" now?";
+    Que[12]= "Out of "+x+" children of a "+place1+", "+y+" goes to school. How many children do not goes to school?";
+    Que[13]= "I had Rs."+x+" with me. Out of it Rs."+y+" was spent. Now how much money do I have?";
+    Que[14]= name1+" had Rs."+x+" in her savings bank account. She withdrew Rs."+y+". How much money does she have now in her savings bank account?";
+    Que[15]= name2+"earns Rs."+x+" monthly as his salary. He saves Rs."+y+" monthly. What is his monthly expenditure?";
+    Que[16]= "By how much is "+y+" less than "+x+"?"
+    Que[17]= "The cost of a "+fac1+" is Rs."+x+" and that of a cycle is Rs."+y+". By how much does the "+fac1+" cost more than the cycle?";
+    Que[18]= "A cement merchant had "+x+" "+jag+" of cement in his "+plc1+". He sold "+y+" "+jag+" of cement. Now how many "+jag+"'s are left in the "+plc1+"?";
+    Que[19]= "My father wants to buy a washing machine that costs Rs."+x+". But he has only Rs."+y+". How much more money does he need?";
+    Que[20]= name1+" made a journey of "+x+" km. Out of this, she covered "+y+" km by train and the rest by car. How many km did she cover by car?";
+    
+    for (let i=0; i<=19; i++){
+        var sum=getRandomfromList(Que);
+    }
+    shuffle(sum);
+    var obj={
+        question:sum,
+        choice1:choices[0].toString(),
+        choice2:choices[1].toString(),
+        choice3:choices[2].toString(),
+        choice4:choices[3].toString(),
+        answer:(choices.indexOf(z)+1),
+    };
+    console.log(obj.answer);
+    questions.push(obj);
+};
+for (let index = 0; index < 5 ;index++) {
+    QueGen(questions);
+};
+const CORRECT_BONUS=10;
+const MAX_QUESTIONS=questions.length;
+
+startgame=()=>{
+    queCount=0;
+    score=0;
+    availabelQue=[...questions];
+    getNewQue();
+};
+
+getNewQue= () =>{
+    if (availabelQue.length==0 || QueCounter>=MAX_QUESTIONS){
+        //Store score in local storage
+        localStorage.setItem("MostRecentScore",score)
+        //Go to Score Page
+        return window.location.assign("end.html");
+    }
+    QueCounter++;
+
+    ProgText.innerHTML="Question "+QueCounter+"/"+MAX_QUESTIONS;
+    //Update Progress Bar
+    ProgBar.style.width=(QueCounter/MAX_QUESTIONS)*100+"%";
+
+    const Queindx = Math.floor(Math.random()*availabelQue.length);
+    currentQue=availabelQue[Queindx];
+    Question.innerHTML=currentQue.question;
+    choice.forEach( choice =>{
+        const num=choice.dataset['no'];
+        choice.innerText=currentQue['choice'+num];
+    })
+    availabelQue.splice(Queindx,1);
+    acceptAns=true;
+};
+
+choice.forEach( choice => {
+    choice.addEventListener("click", e =>{
+        if (!acceptAns) return;
+        acceptAns=false;
+        const selectedChoice=e.target;
+        const selectedAns=selectedChoice.dataset["no"];
+        const classToApply=(selectedAns==currentQue.answer)?"correct":"incorrect";
+        
+        if (classToApply=="correct"){
+            increScore(CORRECT_BONUS);
+        }
+
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        setTimeout(() =>{        
+        selectedChoice.parentElement.classList.remove(classToApply);
+        getNewQue();
+        },1000);
+    });
+});
+increScore=(num)=>{
+    score+=num;
+    ScoreText.innerText=score;
+};
+startgame();
